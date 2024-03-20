@@ -1,0 +1,114 @@
+### Multiple-Choice Questions (MCQs):
+
+1. Which of the following is true about strings in Go?
+   - A) Strings are mutable.
+   - B) Strings can contain only ASCII characters.
+   - C) Strings can be concatenated using the `+` operator.
+   - D) Strings are a collection of bytes.
+
+2. What is the type of a single character in Go?
+   - A) byte
+   - B) int
+   - C) string
+   - D) rune
+
+3. What is a rune in Go?
+   - A) A rune is a synonym for a string.
+   - B) A rune is a Unicode code point.
+   - C) A rune is a single-byte character.
+   - D) A rune is a collection of bytes.
+
+4. How do you access the length of a string in Go?
+   - A) Using the `length` property
+   - B) Using the `len` function
+   - C) Using the `size` function
+   - D) Using the `count` property
+
+5. Which of the following functions can be used to convert a string to uppercase in Go?
+   - A) `ToUpper`
+   - B) `Upper`
+   - C) `Uppercase`
+   - D) `ToUpperCase`
+
+6. What is a struct in Go?
+   - A) A struct is a type that represents a collection of fields.
+   - B) A struct is a method that operates on other types.
+   - C) A struct is a function that returns multiple values.
+   - D) A struct is a keyword to define new types.
+
+7. How do you define a struct named `Person` with fields `name` and `age` in Go?
+   - A) `struct Person { name string; age int }`
+   - B) `type Person struct { name string; age int }`
+   - C) `def Person { name string; age int }`
+   - D) `Person := struct { name string; age int }`
+
+8. Which of the following statements is true about structs in Go?
+   - A) Struct fields can be accessed using dot notation.
+   - B) Struct fields can only be of basic data types.
+   - C) Struct fields are private by default.
+   - D) Structs cannot contain methods.
+
+9. What is the zero value of a struct field in Go?
+   - A) nil
+   - B) 0
+   - C) ""
+   - D) false
+
+10. How do you create an instance of a struct in Go?
+    - A) `new(Person)`
+    - B) `Person{}`
+    - C) `Person()`
+    - D) `make(Person)`
+
+### Coding Questions:
+
+1. Write a Go program that counts the number of occurrences of each character in a given string.
+2. Define a struct named `Rectangle` with fields `length` and `width`, and write a method `Area` that calculates and returns the area of the rectangle.
+
+Let me know if you need further explanations or modifications!
+### Multiple-Choice Questions (MCQs) Answers:
+
+1. D) Strings are a collection of bytes.
+2. D) rune
+3. B) A rune is a Unicode code point.
+4. B) Using the `len` function
+5. A) `ToUpper`
+6. A) A struct is a type that represents a collection of fields.
+
+### Coding Questions:
+
+1. Write a Go program that takes a string as input and prints its length.
+
+```go
+package main
+import (
+    "fmt"
+    "unicode/utf8"
+)
+
+func main() {
+    str := "Hello, 世界"
+    length := utf8.RuneCountInString(str)
+    fmt.Printf("Length of '%s' is %d\n", str, length)
+}
+```
+
+2. Write a Go program that defines a `Person` struct with `name` and `age` fields, and then creates and prints an instance of that struct.
+
+```go
+package main
+import "fmt"
+
+type Person struct {
+    name string
+    age  int
+}
+
+func main() {
+    p := Person{name: "Alice", age: 30}
+    fmt.Println("Name:", p.name)
+    fmt.Println("Age:", p.age)
+}
+```
+
+These examples demonstrate basic string manipulation and struct usage in Go. Let me know if you need further explanations or modifications!
